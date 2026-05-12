@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raf Vibe — Content Creator</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"/>
+<link href="styles.css" rel="stylesheet">
+  
 </head>
 <body>
 
@@ -23,7 +24,34 @@
     <li><a href="#tiktok">TikTok</a></li>
   </ul>
   <a href="#" class="nav-cta">✦ Collab with me</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="navDrawer">
+  <ul class="nav-links">
+    <li><a href="#facebook" onclick="closeDrawer()">Facebook</a></li>
+    <li><a href="#reels" onclick="closeDrawer()">Reels</a></li>
+    <li><a href="#youtube" onclick="closeDrawer()">YouTube</a></li>
+    <li><a href="#tiktok" onclick="closeDrawer()">TikTok</a></li>
+  </ul>
+  <a href="#" class="nav-cta">✦ Collab with me</a>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('navDrawer');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+  }
+</script>
 
 <!-- HERO -->
 <div class="hero">
@@ -69,7 +97,7 @@
     </div>
     <div>
       <div class="platform-title">Facebook</div>
-      <div class="platform-sub">Rafvibe · 450,000 followers</div>
+      <div class="platform-sub">rafvibe · 450,000 followers</div>
     </div>
     <button class="follow-btn" style="background:#1877F2;color:white;">+ Follow</button>
   </div>
@@ -182,12 +210,12 @@
     </div>
     <div>
       <div class="platform-title">Reels & Stories</div>
-      <div class="platform-sub">@Rafvibe · 820,000 followers</div>
+      <div class="platform-sub">@rafvibe · 820,000 followers</div>
     </div>
     <button class="follow-btn" style="background:linear-gradient(135deg,#E1306C,#F77B22);color:white;">+ Follow</button>
   </div>
 
-  <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))">
+  <div class="cards-grid reel-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))">
     <!-- 6 Reels -->
     <div class="card reel-card">
       <div class="reel-thumb" style="background:linear-gradient(160deg,#FF3B5C33,#0D0D14)">🌊<div class="reel-play"><svg width="14" height="16" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
@@ -224,7 +252,7 @@
     </div>
     <div>
       <div class="platform-title">YouTube</div>
-      <div class="platform-sub">RafVibe · 610,000 subscribers</div>
+      <div class="platform-sub">rafVibe · 610,000 subscribers</div>
     </div>
     <button class="follow-btn" style="background:#FF0000;color:white;">▶ Subscribe</button>
   </div>
@@ -283,12 +311,12 @@
     </div>
     <div>
       <div class="platform-title">TikTok</div>
-      <div class="platform-sub">@Rafvibe · 520,000 followers</div>
+      <div class="platform-sub">@rafvibe · 520,000 followers</div>
     </div>
     <button class="follow-btn" style="background:linear-gradient(135deg,#69C9D0,#EE1D52);color:white;">+ Follow</button>
   </div>
 
-  <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))">
+  <div class="cards-grid reel-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))">
     <div class="card reel-card">
       <div class="reel-thumb" style="background:linear-gradient(160deg,#EE1D5233,#0D0D14)">🚗<div class="reel-play"><svg width="14" height="16" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
       <div class="reel-info"><div class="reel-title">Road trip POV 🎶</div><div class="reel-stats"><span>👁 3.2M</span><span>❤️ 214K</span></div></div>
@@ -319,7 +347,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">Raf<span>Vibe</span></div>
-  <p>Turning everyday moments into stories worth sharing · Rafvibe@creator.com</p>
+  <p>Turning everyday moments into stories worth sharing · rafvibe@creator.com</p>
   <div class="footer-links">
     <a href="#">Media Kit</a>
     <a href="#">Collab Inquiry</a>
